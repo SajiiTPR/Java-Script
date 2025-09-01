@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background colour</title>
+</head>
+<style>
+    div{
+        background-color: rgb(255, 0, 0);
+        border: 8px solid blue;
+        width: 250px;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 15px;
+        transition: .5s linear;
+    }
+</style>
+<body>
+    <div id="color"></div>
+    <button onclick="change()">change colour</button>
+
+    <script>
+        var color = document.getElementById("color")
+
+        function change(){
+            color.style.backgroundColor="lightGreen"
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP varification</title>
+    <style>
+        body{
+            background-color: rgb(238, 238, 238);
+        }
+        #otp{
+            width: 310px;
+            height: 25vh;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 25px 0;
+            border-radius: 20px;
+            margin: 0px auto;
+            margin-top: 25vh;
+            box-shadow: 0 0 5px rgb(from rgb(88, 88, 88) 255 155 75);
+            backdrop-filter: blur(25px);
+            background-color: rgb(255, 255, 255);
+        }
+        input{
+            width: 70%;
+            padding: 5px 5px;
+            color: rgb(73, 73, 73);
+            font-size: 18px;
+            border-radius: 10px;
+            background: none;
+            box-shadow: 0 0 5px green;
+        }
+        button{
+            width: 60%;
+            display: inline-block;
+            padding: 5px 0;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 2px solid ;
+            background: rgba(121, 255, 242, 0.3);
+            color: rgb(0, 0, 0);
+            box-shadow: 0 0 5px rgb(0, 225, 255);
+            cursor: pointer;
+            font-weight: bolder;
+        }
+        p{
+            font-size: 24px;
+            padding: 0;
+            margin: 0;
+            color: rgb(43, 226, 180);
+            text-shadow: 0 0 2px black;
+            font-weight: bold;
+            text-decoration: underline;
+            cursor: default;
+        }
+        a{
+            background: none;
+            color: rgb(143, 143, 235);
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: underline rgb(105, 209, 207);
+            margin-left: 150px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="otp">
+        <p>OTP Verification</p>
+        <input type="number" id="verification" maxLength="4">
+        <a onclick="generateOTP()">Send</a>
+        <button onclick="checkOTP()">Verify</button>
+    </div>
+    
+    <script>
+        var verificationInput = document.getElementById("verification");
+        var generatedOTP;
+    
+        function generateOTP() {
+            generatedOTP = Math.floor(Math.random() * 10000);
+            alert("OTP number is: " + generatedOTP);
+        }
+    
+        function checkOTP() {
+            let userInput = verificationInput.value;
+            if (userInput === "") {
+                alert("Please enter a number");
+                return;
+            }
+            else if (isNaN(userInput)) {
+                alert("Invalid input. Please enter a number");
+                verificationInput.value = "";
+                return;
+            }
+            else if (generatedOTP === parseInt(userInput)) {
+                alert("You've entered the correct number");
+                verificationInput.value = "";
+            } 
+            else {
+                alert("Wrong number. Please try again");
+                verificationInput.value = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

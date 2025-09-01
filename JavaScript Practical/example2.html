@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handling</title>
+</head>
+<body>
+    <h2 id="txt">hello sajith</h2>
+    <button onclick="change()">Referesh</button>
+
+    <br><br>
+    <h2 id="nme">hello sajith</h2>
+    <button onclick="make()" style="color:red; font-size:20px">click</button>
+
+    <script>
+        var cont = document.getElementById("txt")
+        console.log(cont.textContent)
+
+        function change(){
+            cont.textContent="bye Sajith"
+            console.log(cont.textContent)
+        }
+
+        var init = document.getElementById("nme")
+        function make(){
+            init.textContent = "welcome dear"
+        }
+    </script>
+    
+</body>
+</html>

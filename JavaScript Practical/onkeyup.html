@@ -1,0 +1,23 @@
+<input id="txt" onkeyup="update()">
+<p id="writing"></p>
+
+<script>
+    var inputItem = document.getElementById("txt")
+    var writing = document.getElementById("writing")
+
+    function update(){
+        writing.textContent = inputItem.value
+    }
+</script>
+<br><br><br>
+
+typing:<input id="text" onkeyup="docum()">
+<div id="show"></div>
+<script>
+    var sample = document.getElementById("text")
+    var show = document.getElementById("show")
+
+    function docum() {
+        show.textContent = sample.value
+    }
+</script>

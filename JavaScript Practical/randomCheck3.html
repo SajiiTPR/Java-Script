@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<style>
+    body{
+        background-color: rgb(255, 255, 255);
+        transition: .5s linear;
+    }
+    p {
+        color: blue;
+        font-size: 24px;
+    }
+
+    #right {
+        color: green;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #wrong {
+        color: red;
+        font-size: 20px;
+        text-align: center;
+    }
+    img{
+        width: 5%;
+        margin: 0 auto;
+        border-radius: 100%;
+        cursor: pointer;
+        border: 3px solid green;
+    }
+</style>
+
+<body id="body">
+    <img src="./picker.jpg" alt="bg color img" onclick="color()" title="background color changer">
+    <h1>Random Game Checker</h1>
+    Enter a number: <input id="num" maxlength="1" type="number" placeholder="0-9"><br>
+
+    <button onclick="result()">check</button><br><br><br>
+    result:
+
+    <h3 id="suc"></h3>
+
+    <p id="score">Score: 10</p>
+
+    <script>
+        var body = document.getElementById("body")
+        var number = document.getElementById("num")
+        var right = document.getElementById("suc")
+        var score = document.getElementById("score")
+
+        var totleScore = 10
+
+        var generate = Math.floor(Math.random() * 10)
+        console.log(generate)
+
+        function result() {
+            var value = number.value
+
+            if (generate == value) {
+                right.textContent = "Right Answer"
+                number.value = ""
+                alert("You are WON...")
+            }
+            else {
+                right.textContent = "wrong Answer"
+                totleScore--
+                number.value = ""
+                score.textContent = "Score: " + totleScore
+            }
+        }
+
+        function color(){
+            body.style.backgroundColor="black"
+            body.style.color="white"
+        }
+    </script>
+</body>
+
+</html>

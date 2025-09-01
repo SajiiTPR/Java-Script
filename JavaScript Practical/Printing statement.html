@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button press</title>
+    <style>
+        *{
+            transition: .3s linear;
+            font-size: 24px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        img{
+            width: 5%;
+            opacity: 50%;
+            border-radius: 100%;
+            border: 2px solid black;
+            padding: 5px;
+        }
+        img:hover{
+            opacity: 100%;
+        }
+        div{
+            background-color: lightblue;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body id="screen">
+    <img src="./picker.jpg" alt="sample image" onclick="bgcolor()" title="theam colour"><br><br>
+    <button onclick="print()" id="color">print statement</button>
+    <p id="sample"></p>
+
+    <script>
+        var screen = document.getElementById("screen")
+        var sample = document.getElementById("sample")
+        var color = document.getElementById("color")
+        function print() {
+            color.style.backgroundColor="pink"
+            
+            var create = document.createElement("div")
+            create.textContent="good morning"
+            sample.appendChild(create)
+        }
+
+        function bgcolor() {
+            screen.style.backgroundColor="black"
+            screen.style.color="white"
+        }
+    </script>
+    
+</body>
+</html>

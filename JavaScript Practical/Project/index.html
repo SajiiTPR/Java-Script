@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookskey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <h1>Bookskey</h1>
+    </div>
+    <dic id="container">
+        <div id="container-box">
+            <h2 id="book-title">baarathiyar</h2>
+            <p id="book-author">pirabaharan</p>
+            <p id="book-discription">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur quibusdam ratione iusto soluta molestiae, ut quae obcaecati explicabo officia ea!</p>
+            <button id="clear-btn" onclick="deletebtn(event)">Clear</button>
+        </div>
+        
+    </dic>
+    
+
+    <div id="add-details">
+        <form action="" id="form-container">
+            <input type="text" id="book-name" placeholder="book Name">
+            <input type="text" id="author-name" placeholder="author name">
+            <textarea id="book-summary" placeholder="book summary"></textarea>
+            <button id="add-card">Add</button>
+            <button id="close-popup" title="Close">X</button>
+        </form>
+    </div>
+
+    <div id="black-screen"></div>
+
+    <button class="add-book">+</button>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

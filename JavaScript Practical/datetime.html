@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>degital Clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 30px;
+            letter-spacing: .26em;
+        }
+        body{
+            background: linear-gradient(45deg, rgba(255,255,215,.4), rgba(5, 247, 247, 0.4)) no-repeat fixed center/cover;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            gap: 30px;
+        }
+        main .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        main .format{
+            text-transform: uppercase;
+            color: brown;
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="hourse" id="hourse">00</div>
+            <span>:</span>
+        </div>
+        <div class="container">
+            <div class="minutes" id="minutes">00</div>
+            <span>:</span>
+        </div>
+        <div class="container">
+            <div class="seconds" id="seconds">00</div>
+        </div>
+        <div class="format">
+            <span id="format-time"> am</span>
+        </div>
+    </main>
+    <script>
+        function displaytime(){
+            let dateTime = new Date();
+            let hr = dateTime.getHours();
+            let min = addZero(dateTime.getMinutes());
+            let sec = addZero(dateTime.getSeconds());
+            if(hr>12){
+                hr = hr-12;
+                document.getElementById('format-time').innerHTML='pm';
+            }else{
+                document.getElementById('format-time').innerHTML='am';
+            }
+
+            document.getElementById('hourse').innerHTML=addZero(hr);
+            document.getElementById('minutes').innerHTML=min;
+            document.getElementById('seconds').innerHTML=sec;
+        }
+        setInterval(displaytime,500);
+        function addZero(num){
+            return num<10?"0"+num:num;
+        }
+    </script>
+</body>
+</html>

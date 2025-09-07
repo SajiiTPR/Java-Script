@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background-color: #333;
+    color: aliceblue;
+    display: flex;
+    padding: 10px;
+}
+header .logo{
+    flex: 3;
+    font-size: 40px;
+}
+header .hexcode{
+    flex: 1;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    color: burlywood;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: brown;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: blanchedalmond;
+    text-transform: capitalize;
+}
+footer .name{
+    flex: 1;
+    min-width: 170px;
+    flex-wrap: wrap;
+    text-align: right;
+}
+footer .contect, a{
+    flex: 1;
+    color: aqua;
+}
+footer .course{
+    flex: 1;
+    text-align: left;
+    text-transform: uppercase;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    border: 1px solid;
+    margin: 6px 0;
+}
+main button{
+    font-size: 16px;
+    padding: 13px 10px;
+    border-radius: 5%;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    border: NONE;
+    background-color: crimson;
+    color: blanchedalmond;
+}

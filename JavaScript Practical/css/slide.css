@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blanchedalmond;
+}
+.container{
+    border: 8px outset blue;
+    width: 60%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    height: 75vh;
+    margin: 4rem auto;
+    position: relative;
+    background: url(../image/A.jpg) fixed center/cover no-repeat;
+    transition: .3s ease-in;
+}
+.btn-left{
+    position: absolute;
+    top: 50%;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 20%;
+    border: 1px solid green;
+    left: -20px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+.btn-right{
+    position: absolute;
+    top: 50%;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 20%;
+    border: 1px solid green;
+    right: -20px;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}
+.btn-left:active{
+    background-color: rgb(100, 57, 1);
+    color: aliceblue;
+}
+
+.btn-right:active{
+    background-color: rgb(97, 57, 5);
+    color: aliceblue;
+}

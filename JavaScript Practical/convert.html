@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>money convert</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .converter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 80vh;
+            width: 350px;
+            margin: 0 auto;
+        }
+        .converter .input-field{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 50vw;
+            height: 50vh;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0px 10px rgba(255, 220, 170, .8);
+        }
+        .converter .input-field input,button{
+            width: 100%;
+            border-radius: 7px;
+            border: none;
+            outline: none;
+            padding: 8px 5px;
+            letter-spacing: .3em;
+            background: linear-gradient(to top, rgba(255,255,255,.6),rgba(105, 187, 11, 0.6));
+        }
+        .converter .input-field input{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            border-bottom: 5px solid rgba(255, 255, 255, .8);
+            color: black;
+        }
+        #result{
+            color: rgb(8, 75, 75);
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: .2rem;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 5vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter">
+    <div class="input-field">
+        <input type="number" id="number" name="number" autocomplete="off"/>
+        <button type="submit">submit</button>
+    </div>
+    <div id="result"></div>
+</div>
+<script>
+    document.querySelector('button').addEventListener('click', ()=>{
+        let num = Number(document.querySelector('#number').value);
+        
+        // Check if input is a valid number
+        if (isNaN(num)) {
+            document.querySelector("#result").innerHTML = "Please enter a valid number";
+            return;
+        }
+        
+        let convert = (num*325.4).toFixed(2);
+        document.querySelector("#result").innerHTML = "Srilankan money convert from " + num + " to USDT convert money: " + convert;
+    })
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            transition: .2s linear;
+        }
+        button{
+            font-size: 22px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            margin: 30vh auto;
+        }
+        .light{
+            background-color: rgb(255, 255, 255);
+        }
+        .dark{
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btn">Theme</button>
+    <script>
+        document.body.classList.add('light')
+        const btn = document.querySelector('#btn')
+
+        btn.addEventListener('click',()=>{
+            document.body.classList.toggle('dark')
+            // document.body.classList.toggle('light')
+        })
+
+    </script>
+    
+</body>
+</html>

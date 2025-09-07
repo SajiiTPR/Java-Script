@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 15px;
+    background-color: darkgray;
+    cursor: default;
+}
+
+header .head-box {
+    display: flex;
+    align-items: center;
+}
+
+header h2 {
+    flex: 1;
+    color: antiquewhite;
+    text-shadow: 0 0 3px black;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: .5em;
+}
+
+header nav {
+    flex: 2;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+header ul li {
+    list-style: none;
+    text-transform: capitalize;
+    max-width: 100px;
+    padding: 0 15px;
+}
+
+header ul li:hover {
+    color: aliceblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header p {
+    flex: 1;
+    color: azure;
+    letter-spacing: .2rem;
+    flex-wrap: wrap;
+}
+
+main {
+    background-color: pink;
+    width: 100%;
+    height: 80vh;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main .button {
+    font-size: 18px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 30vw;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+main .button:active {
+    background-color: darkblue;
+    color: antiquewhite;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: black;
+    color: azure;
+    width: 100%;
+    padding: 10px;
+}
+
+footer ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer ul li {
+    list-style: none;
+    text-transform: capitalize;
+}
+@media all and (max-width:640px){
+    header .head-box{
+        display: flex;
+        flex-direction: column;
+    }
+    header h2{
+        align-self: self-start;
+        font-size: 24px;
+    }
+    header ul{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        display: none;
+    }
+    .showmenu{
+        display: block;
+    }
+    header ul li{
+        margin: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    header p{
+        align-self: flex-start;
+        
+    }
+    .menu{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+    .list{
+        background-color: brown;
+        width: 20px;
+        height: 3px;
+        margin: 4px 0;
+    }
+
+}

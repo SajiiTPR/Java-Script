@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(0, 136, 255);
+    color: rgb(190, 15, 158);
+    padding: 10px;
+    display: flex;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+header .logo{
+    flex: 3;
+}
+header .logo p{
+    font-size: 40px;
+    color: rgb(190, 15, 158);
+    text-shadow: 0 0 3px white;
+}
+header .code{
+    flex: 1;
+}
+header .code p{
+    font-size: 26px;
+    color: rgb(198, 246, 231);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+main .bgcolor{
+    padding: 2px;
+}
+main button{
+    width: 200px;
+    font-size: 16px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: brown;
+    color: azure;
+    font-weight: bold;
+    box-shadow: 0 0 2px rgb(183, 255, 0),0 0 4px white;
+}
+main button:active{
+    box-shadow: inset 5px 5px 8px whitesmoke,
+                inset -5px -5px 8px whitesmoke;
+}

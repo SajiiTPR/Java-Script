@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/colorbg.css"> -->
+    <title>color picker port</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: aliceblue;
+            display: flex;
+            padding: 10px;
+        }
+
+        header .logo {
+            flex: 3;
+            font-size: 30px;
+        }
+
+        header .hexcode {
+            flex: 1;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 15px;
+            color: burlywood;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: brown;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            color: blanchedalmond;
+            text-transform: capitalize;
+            font-size: 16px;
+        }
+
+        footer .name {
+            flex: 2;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        footer .contect,
+        a {
+            flex: 1;
+            color: aqua;
+        }
+
+        footer .course {
+            flex: 2;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80vh;
+            border: 1px solid;
+            margin: 15px auto;
+        }
+
+        main button {
+            font-size: 16px;
+            padding: 13px 10px;
+            border-radius: 15px;
+            flex-wrap: wrap;
+            text-transform: uppercase;
+            border: NONE;
+            background-color: crimson;
+            color: blanchedalmond;
+        }
+
+        main button:active {
+            background-color: rgb(246, 157, 157);
+            color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <p class="logo">color extenstion</p>
+        <p class="hexcode">#</p>
+    </header>
+    <main id="bgcolor">
+        <button id="btnclick">change the background colour</button>
+    </main>
+    <footer>
+        <p class="name">M.A.Mohamed Sajith</p>
+        <p class="contect"><a href="tel:+97758220825">contect me</a></p>
+        <p class="course">hnd-it</p>
+    </footer>
+
+    <script>
+        let title = document.querySelector(".hexcode")
+        let bgcolor = document.querySelector("#bgcolor")
+        let btnclick = document.querySelector("#btnclick")
+        let hexcode = [0, 1, 2, 3, 4, 5, 6, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
+
+        btnclick.addEventListener("click", () => {
+            let hexcolor = "#"
+
+            for (let i = 1; i <= 6; i++) {
+                hexcolor += generate();
+            }
+            console.log(hexcolor)
+
+            bgcolor.style.backgroundColor = hexcolor;
+            title.innerHTML = hexcolor;
+            title.style.color = hexcolor;
+        })
+
+        function generate() {
+            let random = Math.floor(Math.random() * hexcode.length)
+            return hexcode[random]
+        }
+    </script>
+
+</body>
+
+</html>
